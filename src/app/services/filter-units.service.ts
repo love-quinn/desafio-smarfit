@@ -73,10 +73,8 @@ export class FilterUnitsService {
       const OPEN_HOUR = OPENING_HOURS[hour as HOUR_INDEXES].first
       const CLOSE_HOUR = OPENING_HOURS[hour as HOUR_INDEXES].last
       let results = intermediateResults.filter(location => this.filterUnits(location, OPEN_HOUR, CLOSE_HOUR));
-      console.log(results)
       return results;
     } else {
-      console.log(intermediateResults)
       return intermediateResults;
     }
   }
